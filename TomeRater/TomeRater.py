@@ -190,7 +190,7 @@ class TomeRater():
 
     def most_read_book(self):
         selected_book = None
-        max_num_read = 0
+        max_num_read = float("-inf")
         for key, value in self.books.items():
             if value > max_num_read:
                 max_num_read = value
@@ -199,7 +199,7 @@ class TomeRater():
 
     def highest_rated_book(self):
         selected_book = None
-        max_average_rating = 0
+        max_average_rating = float("-inf")
         for book in self.books.keys():
             if book.get_average_rating() > max_average_rating:
                 max_average_rating = book.get_average_rating()
@@ -208,7 +208,7 @@ class TomeRater():
 
     def most_positive_user(self):
         selected_user = None
-        max_average_rating = 0
+        max_average_rating = float("-inf")
         for key, value in self.users.items():
             if value.get_average_rating() > max_average_rating:
                 max_average_rating = value.get_average_rating()
